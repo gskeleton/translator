@@ -2,6 +2,14 @@
 // (A) The difference is that Player means the form (ID) is not ignored and works for everything on a per-player basis. 
 // Both the prompt (input) and the response (output) will respect the player’s ID. Meanwhile, for Global, the prompt (input) and response (output) ignore the ID.
 // Since it’s global, the system cannot be changed individually per player.
+#if defined _inc_translator
+	#undef _inc_translator
+#endif
+#if defined _translator_included
+	#endinput
+#endif
+#define _translator_included
+
 #include <a_samp>
 
 #if ! defined MAX_PLAYERS
